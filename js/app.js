@@ -11,6 +11,7 @@ function bubbleSort(arr) {
       throw new Error();
     }
   }
+
   var temp;
   var length = arr.length;
   var moves = 0;
@@ -18,6 +19,7 @@ function bubbleSort(arr) {
   var divArr = document.getElementById("sorting");
   divArr.innerHTML = arr;
 
+  // bubble sort
   while(length > 1) {
     for(var i = 0; i < arr.length - 1; i++) {
       if(arr[i] > arr[i + 1]) {
@@ -43,6 +45,11 @@ Array.prototype.bubbleSort = function () {
   else if(this.length === 1) {
     throw new Error("Array with 1 value already sorted.");
   }
+  for (var j = 0; j < this.length; j++) {
+    if(isNaN(this[j])) {
+      throw new Error();
+    }
+  }
   var temp;
   var length = this.length;
   var moves = 0;
@@ -50,6 +57,7 @@ Array.prototype.bubbleSort = function () {
   var divthis = document.getElementById("sorting");
   divthis.innerHTML = this;
 
+  // bubble sort
   while(length > 1) {
     for(var i = 0; i < this.length - 1; i++) {
       if(this[i] > this[i + 1]) {
