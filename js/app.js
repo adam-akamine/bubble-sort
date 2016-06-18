@@ -1,10 +1,14 @@
 function bubbleSort(arr) {
   // parameter checking
-  if(arr.length === 0) {
+  if(!Array.isArray(arr)) {
+    throw new Error();
+  }
+  else if(arr.length === 0) {
     throw new Error();
   }
   else if(arr.length === 1) {
-    throw new Error();
+    //throw new Error();
+    return 0;
   }
   for (var j = 0; j < arr.length; j++) {
     if(isNaN(arr[j])) {
